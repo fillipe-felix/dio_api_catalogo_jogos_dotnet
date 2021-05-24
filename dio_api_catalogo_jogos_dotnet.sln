@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dio_api_catalogo_jogos_dotnet", "dio_api_catalogo_jogos_dotnet\dio_api_catalogo_jogos_dotnet.csproj", "{5CD19D13-DFCB-4382-A203-64EFAA5E6A7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CD19D13-DFCB-4382-A203-64EFAA5E6A7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD19D13-DFCB-4382-A203-64EFAA5E6A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD19D13-DFCB-4382-A203-64EFAA5E6A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD19D13-DFCB-4382-A203-64EFAA5E6A7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

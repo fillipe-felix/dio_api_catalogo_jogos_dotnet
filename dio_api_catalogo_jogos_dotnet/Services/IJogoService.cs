@@ -16,6 +16,8 @@ namespace dio_api_catalogo_jogos_dotnet.Services
 
         Task Atualizar(Guid id, JogoInputModel jogo);
 
+        Task Atualizar(Guid id, double preco);
+
         Task Remover(Guid id);
     }
 }

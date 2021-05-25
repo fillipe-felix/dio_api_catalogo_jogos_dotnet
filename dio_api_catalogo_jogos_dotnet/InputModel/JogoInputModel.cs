@@ -13,7 +13,7 @@ namespace dio_api_catalogo_jogos_dotnet.InputModel
         public string Produtora { get; set; }
         
         [Required]
-        [Range(1, 100, ErrorMessage = "O preço deve ser no minimo 1 real e no maximo 1000 reais")]
+        [Range(1, 1000, ErrorMessage = "O preço deve ser no minimo 1 real e no maximo 1000 reais")]
         public double Preco { get; set; }
     }
 }

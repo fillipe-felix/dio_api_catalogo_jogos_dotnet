@@ -28,7 +28,7 @@ namespace dio_api_catalogo_jogos_dotnet.Repositories
         {
             if (!jogos.ContainsKey(id))
             {
-                return null;
+                return Task.FromResult<>(null);
             }
 
             return Task.FromResult(jogos[id]);

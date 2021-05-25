@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using dio_api_catalogo_jogos_dotnet.Controllers.V1;
+using dio_api_catalogo_jogos_dotnet.Middleware;
 using dio_api_catalogo_jogos_dotnet.Repositories;
 using dio_api_catalogo_jogos_dotnet.Services;
 using Microsoft.AspNetCore.Builder;
@@ -63,6 +64,8 @@ namespace dio_api_catalogo_jogos_dotnet
                 app.UseSwaggerUI(c =>
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "dio_api_catalogo_jogos_dotnet v1"));
             }
+
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseHttpsRedirection();
 

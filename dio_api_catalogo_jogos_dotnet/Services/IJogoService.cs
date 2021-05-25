@@ -6,7 +6,7 @@ using dio_api_catalogo_jogos_dotnet.ViewModel;
 
 namespace dio_api_catalogo_jogos_dotnet.Services
 {
-    public interface IJogoService
+    public interface IJogoService : IDisposable
     {
         Task<List<JogoViewModel>> Obter(int pagina, int quantidade);
 

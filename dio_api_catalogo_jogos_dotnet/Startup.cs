@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dio_api_catalogo_jogos_dotnet.Controllers.V1;
 using dio_api_catalogo_jogos_dotnet.Repositories;
 using dio_api_catalogo_jogos_dotnet.Services;
 using Microsoft.AspNetCore.Builder;
@@ -30,6 +31,15 @@ namespace dio_api_catalogo_jogos_dotnet
         {
             services.AddScoped<IJogoService, JogoService>();
             services.AddScoped<IJogoRepository, JogoSqlServerRepository>();
+            
+            #region CicloDeVida
+
+            services.AddSingleton<IExemploSingleton, ExemploCicloDeVida>();
+            services.AddScoped<IExemploScoped, ExemploCicloDeVida>();
+            services.AddTransient<IExemploTransient, ExemploCicloDeVida>();
+
+            #endregion
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

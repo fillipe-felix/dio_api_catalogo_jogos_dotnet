@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
+using dio_api_catalogo_jogos_dotnet.Exceptions;
 using dio_api_catalogo_jogos_dotnet.InputModel;
 using dio_api_catalogo_jogos_dotnet.Services;
 using dio_api_catalogo_jogos_dotnet.ViewModel;
@@ -54,7 +55,7 @@ namespace dio_api_catalogo_jogos_dotnet.Controllers.V1
 
                 return Ok(jogo);
             }
-            catch (Exception ex)
+            catch (JogoJaCadastradoException ex)
             {
                 Console.WriteLine(ex);
                 return UnprocessableEntity("Já existe um jogo com este nome para esta produtora");
@@ -70,7 +71,7 @@ namespace dio_api_catalogo_jogos_dotnet.Controllers.V1
 
                 return Ok();
             }
-            catch (Exception ex)
+            catch (JogoNaoCadastradoException ex)
             {
                 Console.WriteLine(ex);
                 return NotFound("Não existe esse jogo");
@@ -86,7 +87,7 @@ namespace dio_api_catalogo_jogos_dotnet.Controllers.V1
 
                 return Ok();
             }
-            catch (Exception ex)
+            catch (JogoNaoCadastradoException ex)
             {
                 Console.WriteLine(ex);
                 return NotFound("Não existe esse jogo");
@@ -103,7 +104,7 @@ namespace dio_api_catalogo_jogos_dotnet.Controllers.V1
 
                 return Ok();
             }
-            catch (Exception e)
+            catch (JogoNaoCadastradoException e)
             {
                 Console.WriteLine(e);
                 return NotFound("Não existe este jogo");

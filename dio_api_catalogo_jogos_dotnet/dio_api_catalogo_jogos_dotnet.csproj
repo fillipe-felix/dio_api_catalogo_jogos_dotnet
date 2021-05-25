@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+		<DocumentationFile>bin\Debug\net5.0\dio_api_catalogo_jogos_dotnet.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>

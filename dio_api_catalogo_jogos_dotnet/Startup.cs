@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using dio_api_catalogo_jogos_dotnet.Controllers.V1;
 using dio_api_catalogo_jogos_dotnet.Repositories;
@@ -44,6 +46,10 @@ namespace dio_api_catalogo_jogos_dotnet
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "dio_api_catalogo_jogos_dotnet", Version = "v1"});
+                
+                var basePath = AppDomain.CurrentDomain.BaseDirectory;
+                var fileName = typeof(Startup).GetTypeInfo().Assembly.GetName().Name + ".xml";
+                c.IncludeXmlComments(Path.Combine(basePath, fileName));
             });
         }
 

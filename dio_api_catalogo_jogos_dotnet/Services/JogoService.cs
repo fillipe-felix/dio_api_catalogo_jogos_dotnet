@@ -111,7 +111,7 @@ namespace dio_api_catalogo_jogos_dotnet.Services
 
         public async Task Remover(Guid id)
         {
-            var jogo = _JogoRepository.Obter(id);
+            var jogo = await _JogoRepository.Obter(id);
 
             if (jogo == null)
             {

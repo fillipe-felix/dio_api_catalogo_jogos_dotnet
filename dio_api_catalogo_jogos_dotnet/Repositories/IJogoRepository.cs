@@ -19,6 +19,6 @@ namespace dio_api_catalogo_jogos_dotnet.Repositories
 
         Task Remover(Guid id);
         
-        Task Dispose();
+        void Dispose();
     }
 }

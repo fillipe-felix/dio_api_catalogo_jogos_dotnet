@@ -29,7 +29,7 @@ namespace dio_api_catalogo_jogos_dotnet
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IJogoService, JogoService>();
-            services.AddScoped<IJogoRepository, JogoRepository>();
+            services.AddScoped<IJogoRepository, JogoSqlServerRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
